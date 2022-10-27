@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 300px;)">
+  <h1 style="align-item: center">Joe does not sucks</h1>
+</div>
+
+<div class="d-flex">
+  <% @lists.each do |list| %>
+    <div class="card" style="width: 18rem;">
+      <div class="d-grid justify-content-center align-items-center card-body">
+        <h5><%= link_to list.name, list_path(list) %></h5>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="btn btn-dark"><%= link_to "Create new list", new_list_path %></div>
