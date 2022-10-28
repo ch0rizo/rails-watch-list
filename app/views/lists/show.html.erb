@@ -3,6 +3,9 @@
 <% @list.movies.each do |movie| %> 
     <% movie.bookmarks.each do |bookmark|%>
      
+    
+      <%= cl_image_tag movie.photo.key, height: 300, width: 400, crop: :fill %>
+
       <h3><%= movie.title %></h3>
       <p>
         <%= bookmark.comment.capitalize %> - <%= link_to "Delete", list_bookmark_path(@list, bookmark),
